@@ -11,6 +11,7 @@
 		93C4F9402BAFBFDD00241BD6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C4F93F2BAFBFDD00241BD6 /* ContentView.swift */; };
 		93C4F9422BAFBFDE00241BD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93C4F9412BAFBFDE00241BD6 /* Assets.xcassets */; };
 		93C4F9452BAFBFDE00241BD6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93C4F9442BAFBFDE00241BD6 /* Preview Assets.xcassets */; };
+		93C4F9692BAFC01700241BD6 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C4F9682BAFC01700241BD6 /* Restaurant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		93C4F93F2BAFBFDD00241BD6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		93C4F9412BAFBFDE00241BD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93C4F9442BAFBFDE00241BD6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		93C4F9682BAFC01700241BD6 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				93C4F93D2BAFBFDD00241BD6 /* GustoApp.swift */,
 				93C4F93F2BAFBFDD00241BD6 /* ContentView.swift */,
+				93C4F9672BAFC00E00241BD6 /* Models */,
 				93C4F9412BAFBFDE00241BD6 /* Assets.xcassets */,
 				93C4F9432BAFBFDE00241BD6 /* Preview Content */,
 			);
@@ -65,6 +68,14 @@
 				93C4F9442BAFBFDE00241BD6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		93C4F9672BAFC00E00241BD6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				93C4F9682BAFC01700241BD6 /* Restaurant.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			files = (
 				93C4F9402BAFBFDD00241BD6 /* ContentView.swift in Sources */,
 				93C4F93E2BAFBFDD00241BD6 /* GustoApp.swift in Sources */,
+				93C4F9692BAFC01700241BD6 /* Restaurant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
