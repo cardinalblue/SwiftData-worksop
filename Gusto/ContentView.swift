@@ -13,6 +13,7 @@ struct ContentView: View {
     @Environment(\.modelContext) var modelContext
 
     @Query(
+        filter: #Predicate { $0.priceRating > 0 },
         sort: [
             SortDescriptor(\Restaurant.name),
             SortDescriptor(\Restaurant.priceRating, order: .reverse)
