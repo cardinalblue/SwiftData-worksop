@@ -12,7 +12,12 @@ struct ContentView: View {
 
     @Environment(\.modelContext) var modelContext
 
-    @Query var restaurants: [Restaurant]
+    @Query(
+        sort: [
+            SortDescriptor(\Restaurant.name),
+            SortDescriptor(\Restaurant.priceRating, order: .reverse)
+        ]
+    ) var restaurants: [Restaurant]
 
     let names: [String] = [
         "Wok this Way",
@@ -52,10 +57,11 @@ extension ContentView {
 
     private func createRestaurants(with names: [String]) {
         names
-            .map { name in
+            .enumerated()
+            .map { index, name in
                 Restaurant(
                     name: name,
-                    priceRating: 300,
+                    priceRating: 300 * index,
                     qualityRating: 1,
                     speedRating: 1
                 )
