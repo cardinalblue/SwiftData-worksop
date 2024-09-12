@@ -31,7 +31,9 @@ struct ContentView: View {
                         Spacer()
                         Text(verbatim: "\(restaurant.ranting)")
                     }
-                }
+                }.onDelete(perform: { indexSet in
+                    removeRestaurants(for: indexSet)
+                })
             }
         }
         Button(action: {
@@ -59,6 +61,13 @@ extension ContentView {
             .forEach {
                 modelContext.insert($0)
             }
+    }
+
+    private func removeRestaurants(for indexSet: IndexSet) {
+        indexSet.forEach { index in
+            let restaurant = restaurants[index]
+            modelContext.delete(restaurant)
+        }
     }
 }
 
