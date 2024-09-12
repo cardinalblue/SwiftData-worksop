@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		938A2B852C92B5B300EE9607 /* EditRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938A2B842C92B5B300EE9607 /* EditRestaurantView.swift */; };
 		93C4F93E2BAFBFDD00241BD6 /* GustoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C4F93D2BAFBFDD00241BD6 /* GustoApp.swift */; };
 		93C4F9402BAFBFDD00241BD6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C4F93F2BAFBFDD00241BD6 /* ContentView.swift */; };
 		93C4F9422BAFBFDE00241BD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93C4F9412BAFBFDE00241BD6 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		938A2B842C92B5B300EE9607 /* EditRestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRestaurantView.swift; sourceTree = "<group>"; };
 		93C4F93A2BAFBFDD00241BD6 /* Gusto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gusto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C4F93D2BAFBFDD00241BD6 /* GustoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GustoApp.swift; sourceTree = "<group>"; };
 		93C4F93F2BAFBFDD00241BD6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			children = (
 				93C4F93D2BAFBFDD00241BD6 /* GustoApp.swift */,
 				93C4F93F2BAFBFDD00241BD6 /* ContentView.swift */,
+				938A2B842C92B5B300EE9607 /* EditRestaurantView.swift */,
 				93C4F9672BAFC00E00241BD6 /* Models */,
 				93C4F9412BAFBFDE00241BD6 /* Assets.xcassets */,
 				93C4F9432BAFBFDE00241BD6 /* Preview Content */,
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93C4F9402BAFBFDD00241BD6 /* ContentView.swift in Sources */,
+				938A2B852C92B5B300EE9607 /* EditRestaurantView.swift in Sources */,
 				93C4F93E2BAFBFDD00241BD6 /* GustoApp.swift in Sources */,
 				93C4F9692BAFC01700241BD6 /* Restaurant.swift in Sources */,
 			);

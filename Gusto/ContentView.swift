@@ -26,10 +26,12 @@ struct ContentView: View {
         NavigationStack {
             List {
                 ForEach(restaurants, id: \.name) { restaurant in
-                    HStack {
+                    NavigationLink {
+                        EditRestaurantView(restaurant: restaurant)
+                    } label: {
                         Text(verbatim: restaurant.name)
-                        Spacer()
                         Text(verbatim: "\(restaurant.ranting)")
+                            .frame(maxWidth: .infinity, alignment: .trailing)
                     }
                 }.onDelete(perform: { indexSet in
                     removeRestaurants(for: indexSet)
