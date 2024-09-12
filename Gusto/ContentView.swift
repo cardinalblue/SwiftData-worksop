@@ -25,15 +25,18 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(restaurants, id: \.self) {
-                    Text(verbatim: $0.name)
+                ForEach(restaurants, id: \.name) { restaurant in
+                    HStack {
+                        Text(verbatim: restaurant.name)
+                        Spacer()
+                        Text(verbatim: "\(restaurant.ranting)")
+                    }
                 }
             }
         }
         Button(action: {
             createRestaurants(with: names)
         }, label: {
-            // an Image with the SFSymbol named "plus.circle"
             Image(systemName: "plus.circle")
                 .foregroundColor(.blue)
         })
