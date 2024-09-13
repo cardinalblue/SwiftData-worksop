@@ -16,6 +16,26 @@ struct EditRestaurantView: View {
         Text(verbatim: restaurant.name)
         Form {
             TextField("Name", text: $restaurant.name)
+            Button("Add Dish") {
+                restaurant.dishes.append(Dish(name: "", review: ""))
+            }
+            VStack {
+                Text("Dishes")
+                ScrollView(.horizontal, showsIndicators: true) {
+                    ForEach(restaurant.dishes, id: \.self) { dish in
+                        VStack {
+                            TextField(
+                                "Name",
+                                text: Binding(get: { dish.name }, set: { dish.name = $0 })
+                            )
+                            TextField(
+                                "Review",
+                                text: Binding(get: { dish.review }, set: { dish.review = $0 })
+                            )
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -28,7 +48,8 @@ struct EditRestaurantView: View {
         name: "yo",
         priceRating: 1,
         qualityRating: 2,
-        speedRating: 3
+        speedRating: 3,
+        dishes: []
     )
     return EditRestaurantView(restaurant: restaurant)
         .modelContainer(container)

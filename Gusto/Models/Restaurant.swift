@@ -7,7 +7,6 @@
 
 import Foundation
 import SwiftData
-import Observation
 
 @Model
 class Restaurant {
@@ -30,10 +29,13 @@ class Restaurant {
         (priceRating + qualityRating + speedRating) / 3
     }
 
-    init(name: String, priceRating: Int, qualityRating: Int, speedRating: Int) {
+    var dishes: [Dish]
+
+    init(name: String, priceRating: Int, qualityRating: Int, speedRating: Int, dishes: [Dish] = []) {
         self.name = name
         self.priceRating = priceRating
         self.qualityRating = qualityRating
         self.speedRating = speedRating
+        self.dishes = dishes
     }
 }

@@ -119,7 +119,8 @@ extension ContentView {
                     name: name,
                     priceRating: 100 * .random(in: 1...5),
                     qualityRating: .random(in: 1...5),
-                    speedRating: .random(in: 1...5)
+                    speedRating: .random(in: 1...5), 
+                    dishes: []
                 )
             }
             .forEach {
