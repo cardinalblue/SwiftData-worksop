@@ -85,13 +85,21 @@ struct ContentView: View {
     @State
     private var filterMode: FilterMode = .none
 
+    @State
+    private var searchText: String = ""
+
     var body: some View {
         RestaurantListView(
             sortDescriptors: sortingModes.map { $0.sortDescriptor },
-            filter: filterMode.predicate
+            filter: {
+                guard !searchText.isEmpty else {
+                    return filterMode.predicate
+                }
+                return #Predicate { $0.name.contains(searchText) }
+            }()
         ).onDelete { restaurant in
             modelContext.delete(restaurant)
-        }
+        }.searchable(text: $searchText)
         HStack {
             addRestaurantButton()
             sortingModesOptionButtons()
